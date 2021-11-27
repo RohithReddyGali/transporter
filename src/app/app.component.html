@@ -1,11 +1,3 @@
-<nav class="top-nav">
-  <div class="container">
-    <a title="Blog">Blog</a>
-    <a title="Movers">Movers</a>
-    <a title="FAQ">FAQ</a>
-    <a title="Contact">Contact</a>
-  </div>
-</nav>
 <nav class="nav-transporter sticky-nav">
   <ul class="navbar-wrapper">
     <li class="nav-item">
@@ -14,22 +6,37 @@
     <li class="nav-item">
       <a class="nav-link" title="how-it-works">How it works</a>
     </li>
-    <div class="dropdown"></div>
-    <div class="dropdown"></div>
     <li class="nav-item">
-      <a class="nav-link" title="Why Nexus">Why Nexus</a>
+      <a class="nav-link" title="how-it-works">Blog</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" title="how-it-works">FAQ</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" title="how-it-works">Contact</a>
+    </li>
+    <li class="dropdown">
+      <p-dropdown [options]="transportOptions" [(ngModel)]="selectedTransport" placeholder="Transport Options" optionLabel="name"></p-dropdown>
+    </li>
+    <li class="dropdown">
+      <p-dropdown [options]="serveOptions" [(ngModel)]="selectedServe" placeholder="Who We Serve" optionLabel="name"></p-dropdown>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" title="Why Nexus">Why wemoveauto</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" title="Help">Help</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" routerLink="calculator">
       <a title="Cost Calculator">
         <button type="button">Cost Calculator</button>
       </a>
     </li>
   </ul>
 </nav>
-<content></content>
+<content>
+  <router-outlet></router-outlet>
+</content>
 <footer class="footer-container">
   <div class="links-footer">
     <div class="address-conatiner">
