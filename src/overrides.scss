@@ -1,0 +1,94 @@
+/* This file contains overrides for primeng */
+
+.nav-transporter {
+  .dropdown {
+    .p-dropdown {
+      border: none;
+      outline: none;
+      width: 15rem;
+      font-weight: 500;
+      background-color: #f6f8fa;
+      border-radius: 30px;
+      height: 48px;
+      line-height: 32px;
+      white-space: nowrap;
+      padding: 0px 15px;
+      .p-dropdown-item, .p-placeholder  {
+        color: #00326f;
+      }
+    }
+    .p-focus {
+      box-shadow: none;
+    }
+  }
+}
+
+.calculator-container {
+  padding: 0px 150px;
+  margin-bottom: 60px;
+  .p-steps {
+    margin-bottom: 50px;
+    .p-steps-item {
+      border-radius: 50px;
+      border: 2px dashed rgba(0, 0, 70, 0.4);
+      padding: 15px 25px;
+      position: relative;
+      margin-right: 15px;
+      margin-left: 15px;
+      &:before {
+        content: "";
+        position: absolute;
+        width: 30px;
+        right: -32px;
+        top: 31px;
+        left: auto;
+        margin-top: 0px;
+        border: 1px dashed #9999b5;
+      }
+      &:last-child {
+        &:before {
+          border: unset;
+        }
+      }
+      .p-menuitem-link {
+        flex-direction: row;
+        .p-steps-title {
+          margin-left: 0.5rem;
+          margin-top: 0;
+        }
+      }
+    }
+    .p-steps-current {
+      border: 1px solid #000046;
+    }
+  }
+}
+
+.stepsdemo-content {
+  .p-card {
+    border-radius: 10px;
+    .p-card-body {
+      padding: 0px;
+      .p-card-content {
+        padding-top: 0px;
+      }
+    }
+  }
+  .form-wrapper {
+    .p-dropdown {
+      background: #fff !important;
+      border: 1px solid #e6eefa !important;
+      box-sizing: border-box !important;
+      border-radius: 16px !important;
+      height: 4rem;
+      width: 100%;
+      padding: 0px 20px !important;
+      font-weight: 600;
+      font-size: 15px;
+      color: #09265e;
+      border: none;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

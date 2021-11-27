@@ -1,0 +1,47 @@
+<div class="stepsdemo-content">
+    <p-card>
+        <div class="tabHeader">
+            <div class="tab" [ngClass]="{ active: activeTab === 'route' }" (click)="activeTab = 'route'">
+                Select a Route
+            </div>
+            <div class="tab" [ngClass]="{ active: activeTab === 'shipment' }" (click)="activeTab = 'shipment'">
+                Track a Shipment
+            </div>
+        </div>
+        <div class="tabBody">
+            <div class="tab-content" *ngIf="activeTab === 'route'">
+                <header>Route Details</header>
+                <content>
+                    <!-- <form [formGroup]="routeForm" (ngSubmit)="onSubmit()"> -->
+                        <div class="form-wrapper">
+                            <div class="form-group">
+                                <label for="pickup">From</label>
+                                <input id="pickup" pInputText type="text" name="pickup"
+                                    placeholder="ZIP or City, State" autocomplete="off" required="" tabindex="1" />
+                            </div>
+                            <div class="form-group">
+                                <label for="delivery">To</label>
+                                <input id="delivery" pInputText type="text" name="delivery"
+                                     placeholder="ZIP or City, State"
+                                    autocomplete="off" required="" tabindex="2" />
+                            </div>
+                        </div>
+                        <div class="form-wrapper">
+                            <div class="form-group">
+                                <label for="time">Time</label>
+                                <p-dropdown [options]="timeOptions" [(ngModel)]="selectedTime" placeholder="Pickup Date" optionLabel="name"></p-dropdown>
+                            </div>
+                            <div class="form-group">
+                                <label for="size-of-car">Vehicle</label>
+                                <p-dropdown [options]="vehicleOptions" [(ngModel)]="selectedVehicle" placeholder="Size of car" optionLabel="name"></p-dropdown>
+                            </div>
+                        </div>
+                        <p-button label="Continue" (click)="onSubmit()"></p-button>
+                    <!-- </form> -->
+                </content>
+            </div>
+            <div class="tab-content" *ngIf="activeTab === 'shipment'">shipment</div>
+        </div>
+    </p-card>
+    <content></content>
+</div>

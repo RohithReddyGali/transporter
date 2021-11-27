@@ -1,0 +1,79 @@
+.stepsdemo-content {
+  display: flex;
+  p-card,
+  content {
+    flex: 1;
+  }
+  .tabHeader {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #f2f2f6;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    .tab {
+      height: 3rem;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1rem;
+      line-height: 1.4rem;
+      color: #979cb6;
+      cursor: pointer;
+      border-bottom: 1px solid rgba(9, 38, 94, 0.1);
+      &.active {
+        background-color: #09265e;
+        color: #fff;
+      }
+    }
+  }
+  .tabBody {
+    padding: 40px;
+    header {
+      text-align: center;
+      font-size: 2.75rem;
+      font-weight: 600;
+    }
+    .form-wrapper {
+      display: flex;
+      justify-content: space-evenly;
+      .form-group {
+        flex: 0 1 12.25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem 0;
+        label {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 17px;
+          color: #09265e;
+          margin-left: 15%;
+          align-self: start;
+          margin-top: 0px !important;
+        }
+        input {
+          background: #fff !important;
+          border: 1px solid #e6eefa !important;
+          box-sizing: border-box !important;
+          border-radius: 16px !important;
+          height: 4rem;
+          width: 100%;
+          padding: 0px 20px !important;
+          font-weight: 600;
+          font-size: 15px;
+          color: #09265e;
+          border: none;
+        }
+      }
+    }
+    p-button {
+      display: block;
+      text-align: center;
+      margin-top: 1em;
+    }
+  }
+}
